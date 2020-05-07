@@ -4,24 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>流光灯</title>
+    <title>帅气的流光灯，想学吗？</title>
     <style>
         *{
             margin: 0;
             padding: 0;
         }
         body{background-color:#000;}
+        .w{
+            width: 400px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-100%);
+            
+        }
+        p{
+            color: #fff;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bolder;
+        }
+        span{
+            color: #fff;
+            text-align: center;
+            display: block;
+        }
         a{
             text-decoration: none;
             position: absolute;
-            left:50%;
+            /* left:50%;
             top:50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%); */
             font-size:24px;
             width: 400px;
             height: 100px;
             line-height: 100px;
             text-align: center;
+            color: #fff;
             background: linear-gradient(90deg,#9370DB,#AFEEEE,#FFA500,#9370DB);
             /* background:linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4); */
             border-radius:50px;
@@ -57,6 +77,10 @@
     </style>
 </head>
 <body>
-    <a href="https://github.com/ruige233/ruige233.github.io">sunbutton</a>
+    <div class="w">
+        <p>流光灯</p>
+        <span>鼠标停在上面会动~想学吗</span>
+        <a href="javascript:;">sunbutton</a>
+    </div>
 </body>
 </html>
