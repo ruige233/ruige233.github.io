@@ -1,1 +1,62 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>流光灯</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{background-color:#000;}
+        a{
+            text-decoration: none;
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            font-size:24px;
+            width: 400px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            background: linear-gradient(90deg,#9370DB,#AFEEEE,#FFA500,#9370DB);
+            /* background:linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4); */
+            border-radius:50px;
+            text-transform: uppercase;
+            background-size: 400%;
+            z-index: 1;
+        }
+        a::before{
+            content: "";
+            position: absolute;
+            left:-5px;
+            top: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(90deg,#9370DB,#AFEEEE,#FFA500,#9370DB);
+            /* background:linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4); */
+            background-size:400%;
+            border-radius:50px;
+            filter: blur(20px);
+            z-index: -1;
+        }
+        a:hover{
+            animation: sun 7s infinite;
+        }
+        a:hover::before{
+            animation: sun 7s infinite;
+        }
+        @keyframes sun {
+            100%{
+                background-position: -400% 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:;">sunbutton</a>
+</body>
+</html>
